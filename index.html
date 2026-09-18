@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PRIME PIXEL STUDIO - Photography, Videography, Editing, Printing and Frames">
+<title>PRIME PIXEL STUDIO | Photography & Films</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#080808;
+    color:#fff;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    width:100%;
+    display:block;
+    object-fit:cover;
+}
+
+button{
+    font-family:inherit;
+    cursor:pointer;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(0,0,0,.94);
+    border-bottom:1px solid #222;
+}
+
+.nav-inner{
+    max-width:1200px;
+    width:92%;
+    margin:auto;
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#d4af37;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.nav-links a{
+    color:#ddd;
+    font-size:14px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#d4af37;
+}
+
+.nav-btn{
+    background:#d4af37;
+    color:#000;
+    padding:11px 18px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    background:
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.75)),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=90")
+    center/cover;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:clamp(42px,7vw,82px);
+    line-height:1;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#d4af37;
+}
+
+.hero p{
+    font-size:19px;
+    color:#ddd;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:7px;
+    font-weight:bold;
+    margin:5px;
+}
+
+.btn-gold{
+    background:#d4af37;
+    color:#000;
+}
+
+.btn-outline{
+    border:1px solid #d4af37;
+    color:#d4af37;
+}
+
+/* ================= COMMON ================= */
+
+section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#aaa;
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.about-image{
+    height:500px;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.about-image img{
+    height:100%;
+}
+
+.about-text h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.about-text h2 span{
+    color:#d4af37;
+}
+
+.about-text p{
+    color:#bbb;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+/* ================= SERVICES ================= */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.service-card{
+    background:#111;
+    border:1px solid #222;
+    border-radius:14px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-7px);
+    border-color:#d4af37;
+}
+
+.service-card img{
+    height:230px;
+}
+
+.service-card-content{
+    padding:22px;
+}
+
+.service-card h3{
+    font-size:23px;
+    margin-bottom:10px;
+}
+
+.service-card p{
+    color:#999;
+    line-height:1.6;
+    margin-bottom:18px;
+}
+
+.view-btn{
+    display:inline-block;
+    color:#d4af37;
+    font-weight:bold;
+}
+
+/* ================= PACKAGES ================= */
+
+.packages{
+    background:#0d0d0d;
+}
+
+.package-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.package{
+    background:#151515;
+    border:1px solid #292929;
+    padding:30px 20px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.package h3{
+    margin-bottom:15px;
+}
+
+.price{
+    font-size:30px;
+    color:#d4af37;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.package p{
+    color:#aaa;
+    margin-bottom:20px;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.gallery-item{
+    height:260px;
+    border-radius:10px;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.gallery-item img{
+    height:100%;
+    transition:.4s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+/* ================= BOOKING ================= */
+
+.booking{
+    background:#111;
+}
+
+.booking-box{
+    max-width:800px;
+    margin:auto;
+    background:#171717;
+    padding:35px;
+    border-radius:15px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:15px;
+    background:#0b0b0b;
+    border:1px solid #333;
+    color:#fff;
+    border-radius:7px;
+    outline:none;
+}
+
+textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.full{
+    grid-column:1/-1;
+}
+
+.submit-btn{
+    width:100%;
+    border:none;
+    background:#d4af37;
+    color:#000;
+    padding:16px;
+    border-radius:7px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.contact-card{
+    background:#111;
+    border:1px solid #222;
+    border-radius:12px;
+    padding:25px;
+    text-align:center;
+}
+
+.contact-card h3{
+    color:#d4af37;
+    margin-bottom:10px;
+}
+
+.contact-card p{
+    color:#aaa;
+    line-height:1.6;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:30px 0;
+    text-align:center;
+    background:#050505;
+    border-top:1px solid #222;
+}
+
+footer p{
+    color:#888;
+}
+
+/* ================= SERVICE PAGES ================= */
+
+.page{
+    display:none;
+    min-height:100vh;
+    background:#080808;
+}
+
+.page.active{
+    display:block;
+}
+
+.page-top{
+    padding:35px 0 10px;
+}
+
+.back-btn{
+    display:inline-block;
+    color:#d4af37;
+    border:1px solid #d4af37;
+    padding:11px 18px;
+    border-radius:7px;
+    margin-bottom:25px;
+}
+
+.detail-hero{
+    display:grid;
+    grid-template-columns:1.15fr 1fr;
+    gap:45px;
+    align-items:center;
+    padding:20px 0 70px;
+}
+
+.detail-main-image{
+    height:520px;
+    border-radius:16px;
+    overflow:hidden;
+}
+
+.detail-main-image img{
+    height:100%;
+}
+
+.detail-content h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.detail-content h1 span{
+    color:#d4af37;
+}
+
+.detail-content p{
+    color:#aaa;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.detail-list{
+    list-style:none;
+    margin:20px 0;
+}
+
+.detail-list li{
+    padding:10px 0;
+    border-bottom:1px solid #222;
+    color:#ddd;
+}
+
+.detail-list li::before{
+    content:"✓";
+    color:#d4af37;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+/* RELATED PHOTOS */
+
+.related-title{
+    text-align:center;
+    font-size:35px;
+    margin-bottom:30px;
+}
+
+.related-gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    padding-bottom:80px;
+}
+
+.related-gallery div{
+    height:280px;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+.related-gallery img{
+    height:100%;
+    transition:.4s;
+}
+
+.related-gallery img:hover{
+    transform:scale(1.07);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .package-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .detail-hero{
+        grid-template-columns:1fr;
+    }
+
+    .detail-main-image{
+        height:400px;
+    }
+
+    .related-gallery{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:55px 0;
+    }
+
+    .hero{
+        min-height:80vh;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .services-grid,
+    .package-grid,
+    .contact-grid,
+    .gallery-grid,
+    .related-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .about-image{
+        height:350px;
+    }
+
+    .detail-content h1{
+        font-size:40px;
+    }
+
+    .detail-main-image{
+        height:330px;
+    }
+
+    .related-gallery div{
+        height:300px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full{
+        grid-column:auto;
+    }
+
+    .booking-box{
+        padding:20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+                     HOME PAGE
+========================================================= -->
+
+<div id="homePage" class="page active">
+
+<nav>
+    <div class="nav-inner">
+
+        <div class="logo">
+            PRIME <span>PIXEL</span> STUDIO
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#packages">Packages</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <a href="#booking" class="nav-btn">Book Now</a>
+
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+
+            <h1>
+                PRIME <span>PIXEL</span><br>
+                STUDIO
+            </h1>
+
+            <p>
+                Photography & Films that turn your special moments
+                into timeless memories.
+            </p>
+
+            <a href="#services" class="btn btn-gold">
+                Explore Services
+            </a>
+
+            <a href="#booking" class="btn btn-outline">
+                Book Your Event
+            </a>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=85">
+            </div>
+
+            <div class="about-text">
+
+                <h2>
+                    About <span>Prime Pixel</span>
+                </h2>
+
+                <p>
+                    PRIME PIXEL STUDIO is a professional photography
+                    and filmmaking studio dedicated to capturing
+                    beautiful memories.
+                </p>
+
+                <p>
+                    From weddings and birthdays to baby shoots and
+                    special ceremonies, we create photographs and
+                    films that you can cherish forever.
+                </p>
+
+                <p>
+                    We also provide editing, printing and premium
+                    photo frame services.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Click any service to open its dedicated page.</p>
+        </div>
+
+        <div class="services-grid">
+
+            <!-- WEDDING -->
+
+            <div class="service-card"
+                 onclick="openService('wedding')">
+
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85">
+
+                <div class="service-card-content">
+
+                    <h3>Wedding Photography</h3>
+
+                    <p>
+                        Complete wedding photography
+                        and cinematic memories.
+                    </p>
+
+                    <span class="view-btn">
+                        View Wedding Page →
+                    </span>
+
+                </div>
+            </div>
+
+
+            <!-- VIDEOGRAPHY -->
+
+            <div class="service-card"
+                 onclick="openService('videography')">
+
+                <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1000&q=85">
+
+                <div class="service-card-content">
+
+                    <h3>Videography</h3>
+
+                    <p>
+                        Cinematic videos and event films
+                        for your special moments.
+                    </p>
+
+                    <span class="view-btn">
+                        View Videography Page →
+                    </span>
+
+                </div>
+            </div>
+
+
+            <!-- BIRTHDAY -->
+
+            <div class="service-card"
+                 onclick="openService('birthday')">
+
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1000&q=85">
+
+                <div class="service-card-content">
+
+                    <h3>Birthday Shoot</h3>
+
+                    <p>
+                        Fun and colorful birthday
+                        photography.
+                    </p>
+
+                    <span class="view-btn">
+                        View Birthday Page →
+                    </span>
+
+                </div>
+            </div>
+
+
+            <!-- BABY -->
+
+            <div class="service-card"
+                 onclick="openService('baby')">
+
+                <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1000&q=85">
+
+                <div class="service-card-content">
+
+                    <h3>Baby Shoot</h3>
+
+                    <p>
+                        Cute and memorable baby
+                        photography sessions.
+                    </p>
+
+                    <span class="view-btn">
+                        View Baby Page →
+                    </span>
+
+                </div>
+            </div>
+
+
+            <!-- SAREE -->
+
+            <div class="service-card"
+                 onclick="openService('saree')">
+
+                <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=85">
+
+                <div class="service-card-content">
+
+                    <h3>Saree Ceremony</h3>
+
+                    <p>
+                        Beautiful traditional ceremony
+                        photography.
+                    </p>
+
+                    <span class="view-btn">
+                        View Saree Page →
+                    </span>
+
+                </div>
+            </div>
+
+
+            <!-- EDITING -->
+
+            <div class="service-card"
+                 onclick="openService('editing')">
+
+                <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1000&q=85">
+
+                <div class="service-card-content">
+
+                    <h3>Photo & Video Editing</h3>
+
+                    <p>
+                        Professional editing and
+                        cinematic finishing.
+                    </p>
+
+                    <span class="view-btn">
+                        View Editing Page →
+                    </span>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- PACKAGES -->
+
+<section class="packages" id="packages">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Packages</h2>
+            <p>Choose the package that suits your event.</p>
+        </div>
+
+        <div class="package-grid">
+
+            <div class="package">
+                <h3>Wedding Complete</h3>
+                <div class="price">₹1,34,999</div>
+                <p>Complete wedding coverage.</p>
+                <a href="#booking" class="btn btn-gold">Book</a>
+            </div>
+
+            <div class="package">
+                <h3>Birthday Shoot</h3>
+                <div class="price">₹9,999</div>
+                <p>Birthday photography package.</p>
+                <a href="#booking" class="btn btn-gold">Book</a>
+            </div>
+
+            <div class="package">
+                <h3>Baby Shoot</h3>
+                <div class="price">₹9,999</div>
+                <p>Beautiful baby memories.</p>
+                <a href="#booking" class="btn btn-gold">Book</a>
+            </div>
+
+            <div class="package">
+                <h3>Saree Ceremony</h3>
+                <div class="price">₹25,000</div>
+                <p>Traditional ceremony coverage.</p>
+                <a href="#booking" class="btn btn-gold">Book</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Gallery</h2>
+            <p>Click a photo to open its related service page.</p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item"
+                 onclick="openService('wedding')">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85">
+            </div>
+
+            <div class="gallery-item"
+                 onclick="openService('wedding')">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=85">
+            </div>
+
+            <div class="gallery-item"
+                 onclick="openService('videography')">
+                <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1000&q=85">
+            </div>
+
+            <div class="gallery-item"
+                 onclick="openService('birthday')">
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1000&q=85">
+            </div>
+
+            <div class="gallery-item"
+                 onclick="openService('baby')">
+                <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1000&q=85">
+            </div>
+
+            <div class="gallery-item"
+                 onclick="openService('saree')">
+                <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=85">
+            </div>
+
+            <div class="gallery-item"
+                 onclick="openService('editing')">
+                <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1000&q=85">
+            </div>
+
+            <div class="gallery-item"
+                 onclick="openService('wedding')">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=85">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BOOKING -->
+
+<section class="booking" id="booking">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Book Your Event</h2>
+            <p>Send your booking details directly on WhatsApp.</p>
+        </div>
+
+        <div class="booking-box">
+
+            <form id="bookingForm">
+
+                <div class="form-grid">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="tel"
+                        id="mobile"
+                        placeholder="Mobile Number"
+                        required
+                    >
+
+                    <select id="event" required>
+
+                        <option value="">
+                            Select Event
+                        </option>
+
+                        <option>Wedding Photography</option>
+                        <option>Videography</option>
+                        <option>Birthday Shoot</option>
+                        <option>Baby Shoot</option>
+                        <option>Saree Ceremony</option>
+                        <option>Photo & Video Editing</option>
+
+                    </select>
+
+                    <input
+                        type="date"
+                        id="date"
+                        required
+                    >
+
+                    <input
+                        class="full"
+                        type="text"
+                        id="location"
+                        placeholder="Event Location"
+                        required
+                    >
+
+                    <textarea
+                        class="full"
+                        id="requirements"
+                        placeholder="Tell us about your requirements"
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        class="submit-btn full">
+                        Send Booking on WhatsApp
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>Get in touch with Prime Pixel Studio.</p>
+        </div>
+
+        <div class="contact-grid">
+
+            <a class="contact-card"
+               href="tel:+916305476020">
+
+                <h3>Phone</h3>
+                <p>6305476020</p>
+
+            </a>
+
+            <a class="contact-card"
+               href="https://wa.me/916305476020"
+               target="_blank">
+
+                <h3>WhatsApp</h3>
+                <p>Chat With Us</p>
+
+            </a>
+
+            <a class="contact-card"
+               href="mailto:krishnanvmc6@gmail.com">
+
+                <h3>Email</h3>
+                <p>krishnanvmc6@gmail.com</p>
+
+            </a>
+
+            <a class="contact-card"
+               href="https://www.google.com/maps/search/?api=1&query=8MFX%2BP22%20Gudem%2C%20Telangana"
+               target="_blank">
+
+                <h3>Location</h3>
+                <p>Gudem, Mustabad, Rajanna Sircilla</p>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    <p>
+        © 2026 PRIME PIXEL STUDIO. All Rights Reserved.
+    </p>
+</footer>
+
+</div>
+
+
+<!-- =========================================================
+                WEDDING PAGE
+========================================================= -->
+
+<div id="weddingPage" class="page service-page">
+
+    <div class="container page-top">
+
+        <a href="#" class="back-btn" onclick="goHome()">
+            ← Back to Home
+        </a>
+
+        <div class="detail-hero">
+
+            <div class="detail-main-image">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=90">
+            </div>
+
+            <div class="detail-content">
+
+                <h1>
+                    Wedding <span>Photography</span>
+                </h1>
+
+                <p>
+                    Your wedding is one of the most important days
+                    of your life. We capture every emotion, smile,
+                    ritual and beautiful moment.
+                </p>
+
+                <ul class="detail-list">
+                    <li>Pre-Wedding Photography</li>
+                    <li>Wedding Day Photography</li>
+                    <li>Candid Photography</li>
+                    <li>Traditional Photography</li>
+                    <li>Wedding Album</li>
+                    <li>Cinematic Wedding Film</li>
+                </ul>
+
+                <a href="#"
+                   class="btn btn-gold"
+                   onclick="goHome();setTimeout(()=>document.getElementById('booking').scrollIntoView(),100)">
+                   Book Wedding
+                </a>
+
+            </div>
+
+        </div>
+
+        <h2 class="related-title">
+            Wedding Related Photos
+        </h2>
+
+        <div class="related-gallery">
+
+            <div><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=85"></div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+                VIDEOGRAPHY PAGE
+========================================================= -->
+
+<div id="videographyPage" class="page service-page">
+
+    <div class="container page-top">
+
+        <a href="#" class="back-btn" onclick="goHome()">
+            ← Back to Home
+        </a>
+
+        <div class="detail-hero">
+
+            <div class="detail-main-image">
+                <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1400&q=90">
+            </div>
+
+            <div class="detail-content">
+
+                <h1>
+                    <span>Videography</span>
+                </h1>
+
+                <p>
+                    We create cinematic videos that preserve the
+                    emotions and atmosphere of your special event.
+                </p>
+
+                <ul class="detail-list">
+                    <li>Cinematic Event Films</li>
+                    <li>Wedding Films</li>
+                    <li>Birthday Videos</li>
+                    <li>Traditional Event Coverage</li>
+                    <li>Drone Coverage</li>
+                    <li>Professional Video Editing</li>
+                </ul>
+
+                <a href="#"
+                   class="btn btn-gold"
+                   onclick="goHome();setTimeout(()=>document.getElementById('booking').scrollIntoView(),100)">
+                   Book Videography
+                </a>
+
+            </div>
+
+        </div>
+
+        <h2 class="related-title">
+            Videography Related Photos
+        </h2>
+
+        <div class="related-gallery">
+
+            <div><img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1574267432553-4b4628081c31?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&w=1000&q=85"></div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+                  BIRTHDAY PAGE
+========================================================= -->
+
+<div id="birthdayPage" class="page service-page">
+
+    <div class="container page-top">
+
+        <a href="#" class="back-btn" onclick="goHome()">
+            ← Back to Home
+        </a>
+
+        <div class="detail-hero">
+
+            <div class="detail-main-image">
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1400&q=90">
+            </div>
+
+            <div class="detail-content">
+
+                <h1>
+                    Birthday <span>Shoot</span>
+                </h1>
+
+                <p>
+                    Make your birthday memories colorful, fun and
+                    unforgettable with professional photography.
+                </p>
+
+                <ul class="detail-list">
+                    <li>Birthday Portraits</li>
+                    <li>Candid Moments</li>
+                    <li>Decoration Photography</li>
+                    <li>Family & Friends Photos</li>
+                    <li>Event Coverage</li>
+                    <li>Professional Editing</li>
+                </ul>
+
+                <a href="#"
+                   class="btn btn-gold"
+                   onclick="goHome();setTimeout(()=>document.getElementById('booking').scrollIntoView(),100)">
+                   Book Birthday Shoot
+                </a>
+
+            </div>
+
+        </div>
+
+        <h2 class="related-title">
+            Birthday Related Photos
+        </h2>
+
+        <div class="related-gallery">
+
+            <div><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1508361001413-7a9dca21d1c1?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1000&q=85"></div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+                    BABY PAGE
+========================================================= -->
+
+<div id="babyPage" class="page service-page">
+
+    <div class="container page-top">
+
+        <a href="#" class="back-btn" onclick="goHome()">
+            ← Back to Home
+        </a>
+
+        <div class="detail-hero">
+
+            <div class="detail-main-image">
+                <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1400&q=90">
+            </div>
+
+            <div class="detail-content">
+
+                <h1>
+                    Baby <span>Shoot</span>
+                </h1>
+
+                <p>
+                    Capture the tiny smiles, cute expressions and
+                    precious moments of your little one.
+                </p>
+
+                <ul class="detail-list">
+                    <li>Newborn Photography</li>
+                    <li>Baby Portraits</li>
+                    <li>Creative Baby Themes</li>
+                    <li>Family Baby Photos</li>
+                    <li>Milestone Photography</li>
+                    <li>Professional Editing</li>
+                </ul>
+
+                <a href="#"
+                   class="btn btn-gold"
+                   onclick="goHome();setTimeout(()=>document.getElementById('booking').scrollIntoView(),100)">
+                   Book Baby Shoot
+                </a>
+
+            </div>
+
+        </div>
+
+        <h2 class="related-title">
+            Baby Shoot Related Photos
+        </h2>
+
+        <div class="related-gallery">
+
+            <div><img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1504159506876-f8338247a14a?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1511117833895-4b2b5b3b2b3f?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1522771930-78848d9293e8?auto=format&fit=crop&w=1000&q=85"></div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+                 SAREE CEREMONY PAGE
+========================================================= -->
+
+<div id="sareePage" class="page service-page">
+
+    <div class="container page-top">
+
+        <a href="#" class="back-btn" onclick="goHome()">
+            ← Back to Home
+        </a>
+
+        <div class="detail-hero">
+
+            <div class="detail-main-image">
+                <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1400&q=90">
+            </div>
+
+            <div class="detail-content">
+
+                <h1>
+                    Saree <span>Ceremony</span>
+                </h1>
+
+                <p>
+                    Traditional moments deserve beautiful photographs.
+                    We capture the elegance, emotions and celebrations
+                    of your saree ceremony.
+                </p>
+
+                <ul class="detail-list">
+                    <li>Traditional Photography</li>
+                    <li>Candid Photography</li>
+                    <li>Family Portraits</li>
+                    <li>Ritual Photography</li>
+                    <li>Event Coverage</li>
+                    <li>Professional Album</li>
+                </ul>
+
+                <a href="#"
+                   class="btn btn-gold"
+                   onclick="goHome();setTimeout(()=>document.getElementById('booking').scrollIntoView(),100)">
+                   Book Saree Ceremony
+                </a>
+
+            </div>
+
+        </div>
+
+        <h2 class="related-title">
+            Saree Ceremony Related Photos
+        </h2>
+
+        <div class="related-gallery">
+
+            <div><img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1597983073493-88cd35cf93f7?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1610189021880-7f1b5e6f8f12?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1583391733981-8498407a7f5a?auto=format&fit=crop&w=1000&q=85"></div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!-- =========================================================
+                     EDITING PAGE
+========================================================= -->
+
+<div id="editingPage" class="page service-page">
+
+    <div class="container page-top">
+
+        <a href="#" class="back-btn" onclick="goHome()">
+            ← Back to Home
+        </a>
+
+        <div class="detail-hero">
+
+            <div class="detail-main-image">
+                <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1400&q=90">
+            </div>
+
+            <div class="detail-content">
+
+                <h1>
+                    Photo & Video <span>Editing</span>
+                </h1>
+
+                <p>
+                    Professional editing gives your photographs and
+                    videos the perfect finishing touch.
+                </p>
+
+                <ul class="detail-list">
+                    <li>Wedding Photo Editing</li>
+                    <li>Color Correction</li>
+                    <li>Photo Retouching</li>
+                    <li>Cinematic Video Editing</li>
+                    <li>Reels & Short Videos</li>
+                    <li>Album Designing</li>
+                </ul>
+
+                <a href="#"
+                   class="btn btn-gold"
+                   onclick="goHome();setTimeout(()=>document.getElementById('booking').scrollIntoView(),100)">
+                   Contact for Editing
+                </a>
+
+            </div>
+
+        </div>
+
+        <h2 class="related-title">
+            Editing Related Photos
+        </h2>
+
+        <div class="related-gallery">
+
+            <div><img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=1000&q=85"></div>
+
+            <div><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1000&q=85"></div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+
+/* =========================================================
+                    PAGE SWITCHING
+========================================================= */
+
+function hideAllPages(){
+
+    const pages = document.querySelectorAll(".page");
+
+    pages.forEach(function(page){
+        page.classList.remove("active");
+    });
+
+}
+
+
+function openService(service){
+
+    hideAllPages();
+
+    const selectedPage =
+        document.getElementById(service + "Page");
+
+    if(selectedPage){
+        selectedPage.classList.add("active");
+    }
+
+    window.scrollTo({
+        top:0,
+        behavior:"instant"
+    });
+
+}
+
+
+function goHome(){
+
+    hideAllPages();
+
+    document.getElementById("homePage")
+        .classList.add("active");
+
+    window.scrollTo({
+        top:0,
+        behavior:"instant"
+    });
+
+}
+
+
+/* =========================================================
+                     WHATSAPP BOOKING
+========================================================= */
+
+document.getElementById("bookingForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const mobile =
+        document.getElementById("mobile").value;
+
+    const event =
+        document.getElementById("event").value;
+
+    const date =
+        document.getElementById("date").value;
+
+    const location =
+        document.getElementById("location").value;
+
+    const requirements =
+        document.getElementById("requirements").value;
+
+
+    const message =
+`Hello PRIME PIXEL STUDIO,
+
+I would like to book your service.
+
+Name: ${name}
+Mobile: ${mobile}
+Event: ${event}
+Date: ${date}
+Location: ${location}
+
+Requirements:
+${requirements}`;
+
+
+    const whatsappURL =
+        "https://wa.me/916305476020?text="
+        + encodeURIComponent(message);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+});
+
+
+/* =========================================================
+                 ESC KEY -> HOME
+========================================================= */
+
+document.addEventListener("keydown",function(e){
+
+    if(e.key === "Escape"){
+        goHome();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
